@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Header principal */
+.main-header {
+    background: linear-gradient(90deg, #B66444); /* Gradiente azul */
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg,  #F7C78E, #B66444);
+}
+
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.main-header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Header del foro */
+.forum-header h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #B66444; /* Color azul para el título */
+}
+
+.forum-header p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box; /* Evita que el cuadro se salga */
+}
+
+button {
+    width: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background: #0077cc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+/* Comentarios */
+#commentsSection {
+    margin-top: 20px;
+}
+
+#commentsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#commentsList li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#commentsList li:nth-child(odd) {
+    background: #efefef;
+}

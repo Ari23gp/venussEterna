@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evento Artístico</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, );
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, #F7C78E, #B66444);
+      color: white;
+      padding: 5px 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 30px;
+      text-align: center;
+    }
+
+
+    .countdown {
+      background-image: url(Fondo2.png);
+      padding-left: 0%;
+    }
+
+
+
+    h1,
+    h2 {
+      color: #6F1726;
+    }
+
+    /* Cuenta regresiva */
+    .countdown {
+      margin: 30px 0;
+      font-size: 1.8rem;
+      color: #B66444;
+      font-weight: bold;
+
+      padding: 20px;
+      border-radius: 15px;
+
+    }
+
+    .countdown span {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 10px 20px;
+      background: #F7C78E;
+      color: #6F1726;
+      border-radius: 8px;
+    }
+
+    /* Tablas y Cronograma */
+    table {
+      width: 80%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+      padding: 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+      color: #4d3688;
+    }
+
+    th {
+      background-color: #B66444;
+      color: white;
+    }
+
+    td {
+      background-color: #f2f2f9;
+    }
+
+    /* Mapa */
+    .map {
+      margin: 30px auto;
+      border: 5px solid #a48ff0;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Botones */
+    .button {
+      background: linear-gradient(90deg, #ff6d8b, #ffafbd);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Footer Styles */
+    footer {
+      background: linear-gradient(90deg, #F7C78E, #B66444);
+      /* Cambia al color de fondo que prefieras */
+      color: #fff;
+      /* Color del texto */
+      text-align: center;
+      padding: 10px 5px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-logo {
+      max-width: 250px;
+      /* Ajusta el tamaño del logo */
+      height: auto;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      /* Color de los iconos */
+      font-size: 24px;
+      /* Tamaño de los iconos */
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffcc00;
+      /* Cambia al color deseado al pasar el mouse */
+    }
+
+    .copyright {
+      margin-top: 0px;
+      font-size: 14px;
+      color: #fff;
+      /* Cambia según el diseño */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo"><img src="Logo_venus.png" alt="" height=" 70px" width="70px"></div>
+      <div>
+        <a href="#" onclick="reloadImage()">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="Blog.html">Blog</a>
+        <a href="foro.html">Foro</a>
+
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <div class="container">
+    <section class="countdown">
+
+
+      <h1>Bienvenidos al Evento</h1>
+      <p>Fecha: <strong>13 de Diciembre de 2024</strong></p>
+
+
+      <h2>Cuenta Regresiva</h2>
+      <div id="countdown">
+        <span id="days">0</span> días,
+        <span id="hours">0</span> horas,
+        <span id="minutes">0</span> minutos,
+        <span id="seconds">0</span> segundos
+      </div>
+    </section>
+
+    <section>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <h2>Cronograma del Evento</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Actividad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4:00 - 4:15 pm</td>
+            <td>Apertura del evento y bienvenida a los asistentes.</td>
+          </tr>
+          <tr>
+            <td>4:15 - 5:00 pm</td>
+            <td>Búsqueda del Tesoro: Encuentra y pinta las Venus de arcilla.
+
+              Anuncio del Concurso TikTok: Los asistentes podrán grabar su mejor trend de "Diva" de Lali durante todo el
+              evento hasta la premiación.</td>
+          </tr>
+          <tr>
+            <td>5:00 - 5:15 pm</td>
+            <td>Premiación del concurso de pintura de Venus.</td>
+          </tr>
+          <tr>
+            <td>5:15 - 5:30 pm</td>
+            <td>Música en vivo.</td>
+          </tr>
+          <tr>
+            <td>5:30 - 6:45 pm</td>
+            <td>Desfile de Moda: Presentación de la nueva colección de Isaga.</td>
+          </tr>
+          <tr>
+            <td>7:30 - 7:45 pm</td>
+            <td>Premiación del TikTok más creativo.</td>
+          </tr>
+          <tr>
+            <td>8:00 - 9:00 pm</td>
+            <td>Concierto de DJ Isabel Guzmán: Cierre musical del evento</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="ubicacion-evento" style="margin-top: 30px; text-align: center;">
+      <h2>Ubicación del Evento</h2>
+      <div style="margin: 20px auto; max-width: 600px;">
+        <!-- Mapa de Google Maps embebido -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.605666299095!2d-79.92004402971988!3d-2.1672441244406375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d8a5f8f209d%3A0x27c4ed691e422a65!2sUniversidad%20Casa%20Grande!5e0!3m2!1ses-419!2sec!4v1733091613676!5m2!1ses-419!2sec"
+          width="100%" height="450" style="border: 1px solid #ccc;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <p><strong>Dirección:</strong> Carlos Julio Arosemena Tola, Km 2.5, Av. Las Palmas, entre 1er y 2do Pasaje 302,
+        Guayaquil, Ecuador</p>
+    </div>
+
+
+
+
+  </div>
+
+  <footer>
+
+    <div class="footer-container">
+      <img src="Logo_venus.png" alt="Logo" class="footer-logo" width="70px" height="70px">
+      <div class="social-icons">
+        <a href="https://instagram.com" target="_blank">
+          <img src="instagram.png" alt="Instagram" width="25" height="25">
+        </a>
+        <a href="https://facebook.com" target="_blank">
+          <img src="tik-tok (1).png" alt="Facebook" width="25" height="25">
+        </a>
+
+
+  </footer>
+
+
+  <script>
+    // Configuración de la cuenta regresiva
+    const eventDate = new Date('December 13, 2024 00:00:00').getTime();
+    function reloadImage() {
+      // Recarga la página completa, incluyendo la imagen
+      window.location.reload();
+    }
+    setInterval(() => {
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+
+      if (timeLeft <= 0) {
+        document.getElementById("countdown").innerHTML = "¡El evento ha comenzado!";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+  </script>
+</body>
+
+</html>

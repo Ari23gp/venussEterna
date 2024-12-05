@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro Simple</title>
+    <link rel="stylesheet" href="foro.css">
+</head>
+<body>
+
+    <!-- Header principal -->
+    <header class="main-header">
+        <nav>
+            <div class="logo">
+                <img src="Logo_venus.png" alt="Logo Venus" height="70px" width="70px">
+            </div>
+            <div>
+                <a href="index..html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="Blog.html">Blog</a>
+                <a href="foro.html">Foro</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Header del foro -->
+        <header class="forum-header">
+            <h1>Foro de Discusión</h1>
+            <p>Comparte tus pensamientos y comenta en este foro.</p>
+        </header>
+        <main>
+            <form id="commentForm">
+                <textarea id="commentInput" placeholder="Escribe tu comentario aquí..." required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+            <section id="commentsSection">
+                <h2>Comentarios</h2>
+                <ul id="commentsList">
+                    <!-- Los comentarios aparecerán aquí -->
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
